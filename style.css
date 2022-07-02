@@ -7,7 +7,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url("/tambola.png");
+    background: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url("tambola.png");
     /* background-image: url('/tambola.png'); */
     background-repeat: no-repeat;
     background-attachment: fixed;
