@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <title>My Project</title>
+</head>
+
+<body>
+    <!-- <ul class="randomNum">
+
+    </ul> -->
+    <div class="available-prizes">
+        <button class="btn btn-danger all-prize-close">Close</button>
+        <h1>Available prizes <br>
+            <p id="prize-num"></p>
+        </h1>
+        <ul>
+            <li>
+                Full-house:
+                <span id="full-house"></span>
+            </li>
+            <li>
+                Rows:
+                <span id="rows"></span>
+            </li>
+            <li>
+                Corners:
+                <span id="corners"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="mainDiv">
+        <button type="button" id="remainingPrizes" class="btn btn-primary">All prizes</button>
+        <button type="button" id="yourPrizesBtn" class="btn btn-primary">Your prizes</button>
+        <div class="controlBtn">
+            <button type="button" class="btn btn-success rows">Rows</button>
+            <button type="button" class="btn btn-success full-house">Full-house</button>
+            <button type="button" class="btn btn-success corners">Corners</button>
+        </div>
+        <h1 id="randomNum">5</h1>
+        <!-- <h1>Ticket</h1> -->
+
+        <div class="tambola-ticket">
+            <!--First Row-->
+            <div class="tambola-ticket-cell first-row"></div>
+            <div class="tambola-ticket-cell first-row"></div>
+            <div class="tambola-ticket-cell first-row">23</div>
+            <div class="tambola-ticket-cell first-row"></div>
+            <div class="tambola-ticket-cell first-row">45</div>
+            <div class="tambola-ticket-cell first-row"></div>
+            <div class="tambola-ticket-cell first-row striked">67</div>
+            <div class="tambola-ticket-cell first-row">79</div>
+            <div class="tambola-ticket-cell first-row">84</div>
+            <!--Second Row-->
+            <div class="tambola-ticket-cell second-row">2</div>
+            <div class="tambola-ticket-cell second-row"></div>
+            <div class="tambola-ticket-cell second-row">23</div>
+            <div class="tambola-ticket-cell second-row">36</div>
+            <div class="tambola-ticket-cell second-row"></div>
+            <div class="tambola-ticket-cell second-row"></div>
+            <div class="tambola-ticket-cell second-row"></div>
+            <div class="tambola-ticket-cell second-row">77</div>
+            <div class="tambola-ticket-cell second-row">89</div>
+            <!--Third Row-->
+            <div class="tambola-ticket-cell third-row"></div>
+            <div class="tambola-ticket-cell third-row">18</div>
+            <div class="tambola-ticket-cell third-row"></div>
+            <div class="tambola-ticket-cell third-row">33</div>
+            <div class="tambola-ticket-cell third-row">45</div>
+            <div class="tambola-ticket-cell third-row"></div>
+            <div class="tambola-ticket-cell third-row">68</div>
+            <div class="tambola-ticket-cell third-row">74</div>
+            <div class="tambola-ticket-cell third-row"></div>
+        </div>
+    </div>
+
+
+    <div class="your-prizes">
+        <button class="btn btn-danger your-prize-close">Close</button>
+        <h1>Prizes you won
+            <p id="your-prize-num"></p>
+        </h1>
+        <ul>
+            <li>
+                Full-house:
+                <span id="your-full-house">0</span>
+            </li>
+            <li>
+                Rows:
+                <span id="your-rows">0</span>
+            </li>
+            <li>
+                Corners:
+                <span id="your-corners">0</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

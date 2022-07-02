@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url("/tambola.png");
+    /* background-image: url('/tambola.png'); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-color: #6b96c8;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+#randomNum {
+    background-color: #f0e370;
+    width: 100px;
+    margin: auto;
+    text-align: center;
+    border-radius: 50%;
+    color: #0d223d;
+    position: absolute;
+    top: 20%;
+    right: 43%;
+}
+
+#randomNum div {
+    margin: 0;
+    padding: 0;
+}
+
+.mainDiv {
+    position: relative;
+}
+
+h1 {
+    /* background: linear-gradient(rgb(255, 89, 0), rgba(249, 184, 138, 0.967));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-weight: 900;
+    font-size: 60px;
+    text-align: center;
+}
+
+.tambola-ticket {
+    display: grid;
+    max-width: 360px;
+    grid-template-columns: repeat(9, 38px [col-start]);
+    grid-template-rows: repeat(3, 38px [col-start]);
+    column-gap: 2px;
+    row-gap: 2px;
+}
+
+.tambola-ticket-cell {
+    background-color: rgb(159, 225, 253);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+}
+
+.tambola-ticket-cell.striked {
+    background-color: #e89259;
+    color: #000;
+}
+
+.available-prizes {
+    position: absolute;
+    background: linear-gradient(rgb(0, 255, 191), rgb(228, 169, 250));
+    height: 100vh;
+    width: 20vw;
+    left: 0;
+    transform: translateX(-20vw);
+    transition: transform 1s ease;
+}
+
+.available-prizes.active-price {
+    transform: translateX(0);
+}
+
+.available-prizes ul li {
+    list-style-type: none;
+    margin-top: 20px;
+    font-size: 200%;
+}
+
+.your-prizes ul li {
+    list-style-type: none;
+    margin-top: 20px;
+    font-size: 200%;
+}
+
+.your-prizes {
+    position: absolute;
+    background: linear-gradient(rgb(0, 255, 191), rgb(228, 169, 250));
+    height: 100vh;
+    width: 20vw;
+    right: 0;
+    transform: translateX(20vw);
+    transition: transform 1s ease;
+}
+
+.your-prizes.your-active-price {
+    transform: translateX(0);
+}
+
+#yourPrizesBtn {
+    position: absolute;
+    right: 0;
+    top: 25%
+}
+
+#remainingPrizes {
+    position: absolute;
+    top: 25%
+}
+
+.controlBtn {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40%;
+}
+
+@media only screen and (min-width: 600px) {
+    .tambola-ticket-cell {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .tambola-ticket {
+        max-width: 580px;
+        grid-template-columns: repeat(9, 60px [col-start]);
+        grid-template-rows: repeat(3, 60px [col-start]);
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .available-prizes {
+        height: 100vh;
+        width: 100vw;
+        left: 0;
+        transform: translateX(-100vw);
+        transition: transform 1s ease;
+        z-index: 10;
+    }
+    .available-prizes.active-price {
+        transform: translateX(0);
+    }
+    .your-prizes {
+        position: absolute;
+        background: linear-gradient(rgb(0, 255, 191), rgb(228, 169, 250));
+        height: 100vh;
+        width: 100vw;
+        right: 0;
+        transform: translateX(100vw);
+        transition: transform 1s ease;
+    }
+    .your-prizes.your-active-price {
+        transform: translateX(0);
+    }
+    #randomNum {
+        background-color: #f0e370;
+        width: 70px;
+        text-align: center;
+        border-radius: 50%;
+        color: #0d223d;
+        position: absolute;
+        top: 20%;
+        right: 43%;
+    }
+    #randomNum {
+        font-size: 45px !important;
+    }
+}
